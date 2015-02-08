@@ -1,4 +1,3 @@
-Copyright (c) 2009-2012
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,31 +18,21 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
-Thank you for downloading UserCake, the simple user management package.
+Thank you for downloading Online Crypto Tool
 
 //--Installation.
 
 1. Before proceeding please open up models/db-settings.php
 
-2. Create a database on your server / web hosting package.
+2. Create a database on your server  / web hosting package name it as 202 and import the existing database 202.sql file
 
 3. Fill out the connection details in db-settings.php
 
-4. UserCake supports MySQLi and requires MySQL server version 4.1.3 or newer.
+4. IT supports MySQLi and requires MySQL server version 4.1.3 or newer.
 
-5. To use the installer visit http://yourdomain.com/install/ in your browser. UserCake will attempt to build the database for you. After completion
-   delete the install folder.
+5. Please copy the installed to your Web Server 
 
--  That's it you're good to go! In only five steps you have a fully functional user management system.
-   For further documentation visit http://usercake.com
 
-//--Credits
 
-UserCake created by: Adam Davis
-UserCake V2.0 designed by: Jonathan Cassels
-
----------------------------------------------------------------
-
-Vers: 2.0.2
-http://usercake.com
-http://usercake.com/LICENCE.txt
+Version:1.0.0
+Author:Harish Pichukala
