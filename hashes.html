@@ -1,0 +1,114 @@
+<html>
+<head>
+<script src="CryptoJS/rollups/md5.js"></script>
+<script src="CryptoJS/rollups/sha1.js"></script>
+<script src="CryptoJS/rollups/sha256.js"></script>
+<script src="CryptoJS/rollups/sha512.js"></script>
+<script src="CryptoJS/rollups/sha3.js"></script>
+<script src="CryptoJS/rollups/ripemd160.js"></script>
+<script src="CryptoJS/rollups/hmac-sha512.js"></script>
+<script>
+function md5(f)
+{var msg=f.txt.value;
+alert(msg)	
+var hash = CryptoJS.MD5(msg);
+f.txt.value=hash;
+}
+function sha2(f)
+{var msg=f.txt.value;
+alert(msg)	
+var hash = CryptoJS.SHA256(msg);
+f.txt.value=hash;
+}
+function sha512(f)
+{var msg=f.txt.value;
+alert(msg)	
+var hash = CryptoJS.SHA512(msg);
+f.txt.value=hash;
+}
+function sha1(f)
+{var msg=f.txt.value;
+alert(msg)	
+var hash = CryptoJS.SHA1(msg);
+f.txt.value=hash;
+}
+function sha3(f)
+{var msg=f.txt.value;
+alert(msg)	
+var hash = CryptoJS.SHA3(msg);
+f.txt.value=hash;
+}
+function ripemd160(f)
+{var msg=f.txt.value;
+alert(msg)	
+var hash = CryptoJS.RIPEMD160(msg);
+f.txt.value=hash;
+}
+function hmacsha512(f)
+{
+var msg=f.txt.value;
+alert(msg);
+var key=prompt("enter key");
+alert(key);
+var hash=CryptoJS.HmacSHA512(msg,key);
+f.txt.value=hash;
+}
+
+function choose(f)
+{
+var algorithm=f.a.value;
+if(algorithm=="md5")
+{
+md5(f);
+}
+else if(algorithm=="sha1")
+{
+sha1(f);
+}
+else if(algorithm=="sha2")
+{sha2(f);
+}
+else if(algorithm=="sha3")
+{sha3(f);
+}
+else if(algorithm=="sha512")
+{
+sha512(f);
+}
+else if(algorithm=="ripemd160")
+{
+ripemd160(f);
+}
+else
+{
+hmacsha512(f);
+}
+}
+</script>
+</head>
+<body>
+<center>
+<form name="f">
+<h1><font color="red">Hasher</font></h1>
+
+
+Enter Text:
+  <input type="text" name="txt" required>
+</input><br><br>Select algorithm:
+<select name="a" size="1" >
+  <option value="md5" selected>md5</option>
+  <option value="sha1">sha1</option>
+  <option value="sha2">sha2</option>
+  <option value="sha3">sha3</option>
+  <option value="sha512">sha512</option>
+  <option value="ripemd160">RIPEMD160</option>
+<option value="hmacsha512">HMAC</option>
+</select>
+<br><br>
+<input type="button" name="bt" value="hash" onclick=choose(f)>
+<font col0r="red"><br><blink>HELP:</blink></font>
+enter text and choose algorithm and click hash to generate hash.
+</form>
+</center>
+</body>
+</html>
